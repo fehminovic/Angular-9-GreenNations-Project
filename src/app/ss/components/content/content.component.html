@@ -1,0 +1,11 @@
+
+<!-- TODO: vertical menu goes here -->
+<ss-menu
+    *ngIf="menuService.isVertical && screenService.isLarge() || menuService.showingLeftSideMenu && !screenService.isLarge()"
+    class="vertical-menu">
+</ss-menu>
+
+<div class="body-style">
+    <!-- Secondary Router Outlet for the children views -->
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,17 @@
+<a *ngFor="let icon of frameworkConfigService.socialIcons" [href]="icon.link" [title]="icon.alt">
+    <img [src]="icon.imageFile" [alt]="icon.alt" class="top-image">
+</a>
+
+<div *ngIf="frameworkConfigService.showLanguageSelector">
+  <span>EN</span><span class="glyphicon glyphicon-chevron-down"></span>
+</div>
+
+<div *ngIf="frameworkConfigService.showUserControls">
+  <!-- <span>SIGN IN</span> -->
+  <!--
+    Note: The user only sees this screen if they are logged in when AuthGuardService guards the authenticated children routes properly.
+    TODO: Add a getUserFullName() method to the abstract UserAPI.  Use this to display the user's name.
+    -->
+  <span>Fehmi Bchir</span>
+  <div class="sign-out" (click)="signOut()">SIGN OUT</div>
+</div>
